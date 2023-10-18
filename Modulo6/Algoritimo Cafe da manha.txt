@@ -1,0 +1,58 @@
+Algoritmo PrepararCafeDaManha
+Var
+   acordou, olhosAbertos, camaVazia, rostoLavado, fogaoLigado, cafeFervendo, filtroCafe, poCafe, suporteFiltro, caneca, pao, manteiga, frigideira, fogoFrigideira, prato, leite, acucar, colher: Logico
+
+Inicio
+   acordou <- Verdadeiro
+   olhosAbertos <- Verdadeiro
+   camaVazia <- Verdadeiro
+   rostoLavado <- Verdadeiro
+   fogaoLigado <- Falso
+   cafeFervendo <- Falso
+   filtroCafe <- Verdadeiro
+   poCafe <- Verdadeiro
+   suporteFiltro <- Verdadeiro
+   caneca <- Verdadeiro
+   pao <- Verdadeiro
+   manteiga <- Verdadeiro
+   frigideira <- Verdadeiro
+   fogoFrigideira <- Falso
+   prato <- Verdadeiro
+   leite <- Verdadeiro
+   acucar <- Verdadeiro
+   colher <- Verdadeiro
+
+   Se acordou E olhosAbertos E camaVazia E rostoLavado Entao
+      Escreva("Você acordou, abriu os olhos e levantou da cama.")
+      Se Not(fogaoLigado) Entao
+         Escreva("Você ligou o fogo.")
+         fogaoLigado <- Verdadeiro
+      FimSe
+      Enquanto Not(cafeFervendo) Faca
+         Escreva("Você colocou água para ferver.")
+         cafeFervendo <- Verdadeiro
+      FimEnquanto
+      Se filtroCafe E poCafe E suporteFiltro E caneca E pao E manteiga E frigideira E Not(fogoFrigideira) Entao
+         Escreva("Você pegou o filtro de café, colocou pó de café no filtro, e o suporte do filtro em uma caneca.")
+         Escreva("Você pegou 2 fatias de pão, passou manteiga nelas e pegou a frigideira.")
+         Se Not(fogoFrigideira) Entao
+            Escreva("Você ligou o fogo da frigideira.")
+            fogoFrigideira <- Verdadeiro
+         FimSe
+         Enquanto Not(fogoFrigideira) Faca
+            Escreva("Você esperou a frigideira esquentar.")
+         FimEnquanto
+         Escreva("Você colocou as fatias de pão na frigideira.")
+         Escreva("Quando as fatias de pão ficaram douradas, você desligou o fogo.")
+         fogoFrigideira <- Falso
+         Se prato E Not(fogoFrigideira) Entao
+            Escreva("Você pegou um prato e colocou as fatias de pão nele.")
+            prato <- Falso
+         FimSe
+         Se Not(fogaoLigado) Entao
+            Escreva("Você desligou o fogo.")
+            fogaoLigado <- Falso
+         FimSe
+         Se filtroCafe E poCafe E suporteFiltro E caneca E leite E acucar E colher Entao
+            Escreva("Você retirou a caneca do fogão, passou água fervente no filtro de café e retirou o suporte do filtro.")
+            Escreva("Você pegou leite na geladeira, colocou na caneca e fechou
