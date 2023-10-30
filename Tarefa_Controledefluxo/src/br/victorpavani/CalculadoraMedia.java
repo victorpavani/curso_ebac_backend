@@ -1,6 +1,8 @@
 package br.victorpavani;
 import java.util.Scanner;
 
+import java.util.Scanner;
+
 public class CalculadoraMedia {
 
     public static void main(String[] args) {
@@ -20,14 +22,18 @@ public class CalculadoraMedia {
 
         double media = (nota1 + nota2 + nota3 + nota4) / 4;
 
-        if (media < 7) {
-            System.out.println("Média: " + media);
-            System.out.println("Reprovado");
-        } else {
+        if (media >= 7) {
             System.out.println("Média: " + media);
             System.out.println("Aprovado");
+        } else if (media >= 5) {
+            System.out.println("Média: " + media);
+            System.out.println("Recuperação");
+        } else {
+            System.out.println("Média: " + media);
+            System.out.println("Reprovado");
         }
 
         scanner.close();
     }
 }
+
